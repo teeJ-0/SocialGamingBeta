@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    font-family: sans-serif;
+}
+.nav-img {
+    display: flex;
+    height: 80px;
+    width: 160px;
+}
+.nav-img img {
+    height:auto;
+}
+.nav-img img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.nav-links .active{
+    color: red;
+    transform: scale(1.1)
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    border-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: bold;
+
+}
+.nav-links a:hover{
+    color: red;
+    transform: scale(1.1);
+}
+.login-register-container {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    width: 170px;
+    
+
+}
+.login-register-container a {
+    text-decoration: none;
+    color: white;
+
+}
+.login-register-container,
+.login,
+.signup {
+    padding: 9px 0px;
+    
+    
+}
+.login-register-container .login {
+    background-color: #ff4c4c;
+    height: 30px;
+    width: 65px;
+    padding-top: 5px;
+    border-radius: 25px;
+    text-align: center;
+}
+.login-register-container .signup {
+    background-color: #ff4c4c;
+    height: 30px;
+    padding-top: 5px;
+    width: 85px;
+    border-radius: 25px;
+    text-align: center;
+}
+.login-register-container .login:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+.login-register-container .signup:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+
+.login,
+.signup {
+
+}
+
+.featured-games {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+}
+
+.Card-Container {
+    display: flex;
+}
+.item1 {
+    margin-top: 40px;
+    padding-right: 25px;
+}
+.item1:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.featured-games h1 {
+    padding-top: 15px;
+    color: white;
+    font-weight: 100;
+    font-family: 'poppins';
+    text-align: center;
+}
