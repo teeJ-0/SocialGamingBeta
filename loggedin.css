@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 .nav-bar {
     overflow: hidden;
@@ -41,6 +42,9 @@
 .nav-links a:hover{
     color: red;
     transform: scale(1.1);
+}
+.hamburger-icon {
+    display: none;
 }
 
 /* Profile Username */
@@ -84,7 +88,7 @@
 }
 .scrolling-red-alert h2 {
     text-transform: uppercase;
-    white-space: nowrap;
+    white-space: nowrap; /*Keeps text in straight line along red alert*/
     position: absolute;
     margin: 0;
     padding: 0;
@@ -109,14 +113,15 @@
 /* Featured Games */
 
 .featured-games {
-    display:flex;
+    display: flex; /* Keeping Images in Middle */
     justify-content: center;
     width: 100%;
     height: 600px;
 }
 
 .Card-Container {
-    display: flex;
+    display: flex; /* Keeping Images Side by Side */
+    margin-inline: auto;
 }
 .item1 {
     margin-top: 60px;
@@ -140,6 +145,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     margin: 0 auto;
     width: 75%;
     height: 500px;
@@ -155,7 +161,7 @@
     display: flex;
     padding: 40px 35px;
     display: flex;
-    color: black;
+    color: #1e1e1e;
     text-align: center;
     font-family: sans-serif;
     font-size: 18px;
@@ -166,7 +172,7 @@
 .about-section a {
     text-decoration: none;
     padding: 0px 20px;
-    color: black;
+    color: #1e1e1e;
     font-family: sans-serif;
     font-size: 20px;
     font-weight: bold;
@@ -196,7 +202,6 @@
 .container--top-earners {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 35px;
     width: 100%;
     height: 600px;
@@ -218,7 +223,7 @@
     cursor: pointer;
 }
 .sectionEarners h1{
-    color: black;
+    color: #1e1e1e;
     font-weight: bold;
     text-align: center;
     font-size: 35px;
@@ -228,10 +233,7 @@
     font-weight: bold;
     font-family: sans-serif;
     text-align: center;
-    color: black;
-}
-.firstplace-card {
-    
+    color: #1e1e1e;
 }
 .secondplace-card {
     height: 450px;
@@ -259,9 +261,186 @@ footer h2 {
     text-align: center;
 }
 footer p{
-    color: black;
+    color: #1e1e1e;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 12px;
     text-align: center;
+}
+.contact-icons h4 {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* MOBILE VERSION */
+
+@media only screen and (max-width: 700px) {
+    .nav-img {
+        display:flex;
+    }
+    .nav-links {
+        position: absolute;
+        display: block;
+        margin-right: 5px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: white;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+    .nav-links a {
+        display: block;
+        text-decoration: none;
+        color: #1e1e1e;
+        margin-top: 3px;
+        letter-spacing: 1px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .nav-links .active{
+        color: #1e1e1e;
+        transform: scale(1.0);
+    }
+    .nav-links a:hover{
+        color: #1e1e1e;
+        transform: scale(1.05);
+    }
+    .profile-container{
+        
+    }
+    .hamburger-icon {
+        display: block;
+    }
+
+    /* RED ALERT MOBILE FIXED */
+
+    .scrolling-red-alert {
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        overflow: hidden;
+        margin-top: 5px;
+        background-color: red;
+    }
+    .scrolling-red-alert h2 {
+        text-transform: uppercase;
+        white-space: nowrap; /*Keeps text in straight line along red alert*/
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-align: center;
+        color: white;
+        transform: translateX(100%);
+        animation: scrolling 25s linear infinite;
+    }
+    @keyframes scrolling {
+        0% {
+            transform: translateX(100%) ;
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    /* FEATURED GAMES */
+
+    /* This is Scroll Event on Mobile, removed hover scale. */
+    
+    .Card-Container {
+        max-height: 700px;
+        width: 350px;
+        display: flex;
+        overflow-x: auto;
+        gap: var(--size-3);
+        
+    }
+    .Card-Container::-webkit-scrollbar{
+        width: 0;
+        background-color: #c4c4c4;
+    }
+    .item1:hover{
+        transform: scale(1);
+        cursor: pointer;
+    }
+
+    /* GETTING STARED | ABOUT | COMMUNITY SECTION */
+
+    .started-about-community-container {
+        display: block;
+        overflow: hidden;
+        margin: 0 auto;
+        width: min(90%, 70.5rem);
+        height: 900px;
+        
+    }
+    .about-section{
+        
+        text-align: center;
+        margin-top: 35vh;
+        margin-inline: auto;
+        width: min(90%,70.5rem);
+        height: 500px;
+        text-align: center;
+        
+    }
+    .started-about-community-container p {
+        padding: 40px 35px;
+        color: #1e1e1e;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+    
+    }
+    .about-section a {
+        text-decoration: none;
+        padding: 0px 20px;
+        color: #1e1e1e;
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    
+    }
+    .about-section .active {
+        transform:scale(1);
+        color: red;
+    }
+    .about-section a:hover {
+        color: black;
+        font-size: 14px;
+    }
+    .left-img-container,
+    .left-img {
+        
+        margin-inline: auto;
+        left: 20%;
+    }
+    .left-img-container {
+    }
+
+
+    /* TOP EARNERS */ 
+    
+    .container--top-earners {
+        flex-direction: column-reverse;
+        margin: 50px 0;
+        display: block;
+        height: 1350px;
+    
+    }
+    .firstplace-card,
+    .secondplace-card,
+    .thirdplace-card {
+        height: 400px;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+
 }
