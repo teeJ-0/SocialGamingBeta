@@ -38,7 +38,6 @@
     letter-spacing: 1px;
     font-size: 17px;
     font-weight: bold;
-
 }
 .extra-nav-links {
     display: none;
@@ -75,6 +74,7 @@
     padding-bottom: 20px;
 }
 .credits-cash {
+    color: #2c2c2c;
     position: absolute;
     font-weight: bold;
     font-size: 12px;
@@ -190,6 +190,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 15px;
+    color: #2c2c2c;
     font-weight: bold;
     font-family: sans-serif;
     width: 100%;
@@ -197,7 +198,7 @@
 }
 .about-section-tabs a {
     padding: 15px 15px;
-    color: black;
+    color: #1e1e1e;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 18px;
@@ -242,6 +243,7 @@
     text-align: center;
     font-size: 35px;
     font-family: sans-serif;
+    margin-bottom: 30px;
 }
 .sectionEarners .container--top-earners h2{
     font-weight: bold;
@@ -251,8 +253,29 @@
 }
 .firstplace-card {
     height: 600px;
-    width: 500px;
+    width: 600px;
     box-shadow: 0px 0px 30px gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.te1-userinfo-container {
+    margin-top: -10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.te1username {
+    color: #2c2c2c;
+    font-size: 5vh;
+    letter-spacing: 5px;
+}
+.te1-membership {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: white;
+
 }
 .secondplace-card {
     height: 450px;
@@ -261,6 +284,14 @@
 .thirdplace-card {
     height: 400px;
     width: 400px;
+}
+.firstplace-badgecontainer {
+    position: absolute;
+    top: 0;
+    margin-top: -50px;
+}
+.firstbadge {
+    height: 350px;
 }
 
 /* FOOTER */
@@ -451,7 +482,6 @@ footer p{
         margin: 0 auto;
     }
 
-
     /* TOP EARNERS */ 
     
     .container--top-earners {
@@ -459,7 +489,6 @@ footer p{
         margin: 50px 0;
         display: block;
         height: 1200px;
-    
     }
     .firstplace-card,
     .secondplace-card,
@@ -468,6 +497,4 @@ footer p{
         width: 100%;
         margin-bottom: 25px;
     }
-
-
 }
