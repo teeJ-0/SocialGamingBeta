@@ -93,7 +93,7 @@
     width: 100%;
     height: 20px;
     overflow: hidden;
-    margin-top: 5px;
+    margin-top: 20px;
     background-color: red;
 }
 .scrolling-red-alert h2 {
@@ -101,9 +101,10 @@
     white-space: nowrap; /*Keeps text in straight line along red alert*/
     position: absolute;
     margin: 0;
+    margin-top: 1px;
     padding: 0;
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     font-family: sans-serif;
     text-align: center;
@@ -125,8 +126,10 @@
 .featured-games {
     display: flex; /* Keeping Images in Middle */
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: -5vh;
     width: 100%;
-    height: 600px;
+    height: 550px;
 }
 .Card-Container {
     display: flex; /* Keeping Images Side by Side */
@@ -154,7 +157,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 20px 20px 20px;
     margin: 0 auto;
     width: 75%;
     height: 500px;
@@ -243,7 +245,8 @@
     text-align: center;
     font-size: 35px;
     font-family: sans-serif;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 35px;
 }
 .sectionEarners .container--top-earners h2{
     font-weight: bold;
@@ -298,6 +301,7 @@
 
 footer {
     background-color: #c4c4c4;
+    margin-top: 10vh;
     width: 100%;
     height: 200px;
 }
