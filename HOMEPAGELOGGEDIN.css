@@ -5,11 +5,13 @@
     font-family: sans-serif;
 }
 .nav-bar {
+    box-shadow: 0px 0px 5px black;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 80px;
+    height: 85px;
+    padding-bottom: 10px;
     margin: 0 auto;
     width: 100%;
     font-family: sans-serif;
@@ -221,7 +223,7 @@
     gap: 35px;
     width: 100%;
     height: auto;
-    padding: 20px 15px;
+    padding: 10vh 10vh;
     margin: 0 auto;
 
 }
@@ -272,7 +274,7 @@
 .te1username {
     color: #2c2c2c;
     font-size: 5vh;
-    letter-spacing: 5px;
+    letter-spacing: 8px;
 }
 .te1-membership {
     font-family: 'Times New Roman', Times, serif;
@@ -291,11 +293,84 @@
 .firstplace-badgecontainer {
     position: absolute;
     top: 0;
-    margin-top: -50px;
+    margin-top: -8vh;
 }
 .firstbadge {
     height: 350px;
 }
+
+/* tournaments section */ 
+.sectionTournaments {
+    background-color: ;
+    margin-top: 10vh;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container--tournaments {
+    padding: 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: ;
+    height: 600px;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+}
+.sectionTournaments .container--tournaments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.sectionTournaments h1{
+    padding-top: 5px;
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.flex-tournament {
+    background-color: #222;
+    margin: 5px 10px;
+    width: 400px;
+    height: 250px;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sectionTournaments p {
+    color: rgba(162, 0, 0, 1);
+    font-size: 10px;
+    font-family: sans-serif;
+    float: right;
+    padding: 0;
+}
+.sectionTournaments p:hover {
+    cursor: pointer;
+}
+.flex-tournament .vanguardimg {
+    opacity: 1;
+    object-fit: cover;
+    width: 400px;
+    height: 250px;
+    border-radius: 25px;
+}
+.flex-tournament .vanguardimg:hover {
+    border-color:white;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.4s ease-in;
+}
+
 
 /* FOOTER */
 
