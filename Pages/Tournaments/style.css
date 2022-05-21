@@ -2,14 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-/* Nav Bar Section */ 
 .nav-bar {
+    overflow: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 80px;
+    margin: 0 auto;
+    width: 100%;
     font-family: sans-serif;
 }
 .nav-img {
@@ -17,15 +19,14 @@
     height: 80px;
     width: 160px;
 }
-.nav-img img {
-    height:auto;
-}
 .nav-img img:hover {
     cursor: pointer;
-    transform: scale(1.1);
+}
+.nav-links .active{
+    color: red;
+    transform: scale(1.1)
 }
 .nav-links {
-    border-style: none;
     display: flex;
     justify-content: space-around;
 }
@@ -37,58 +38,89 @@
     letter-spacing: 1px;
     font-size: 17px;
     font-weight: bold;
-
+}
+.extra-nav-links {
+    display: none;
+    font-size: 15px;
+}
+.profile-nav-links {
+    display: none;
 }
 .nav-links a:hover{
     color: red;
     transform: scale(1.1);
 }
-.nav-links .active{
-    color: red;
-    transform: scale(1.1)
+.hamburger-icon {
+    display: none;
 }
-.login-register-container {
+
+/* Profile Username */
+
+.profile-container {
     display: flex;
-    justify-content: space-around;
-    height: 40px;
-    width: 170px;
-    
-
+    white-space: nowrap;
+    right: 0;
+    align-items: center;
+    margin-top: 25px;
+    height: 60px;
+    min-width: 200px;
 }
-.login-register-container a {
-    text-decoration: none;
+.profile-container:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.username {
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+.credits-cash {
+    color: #2c2c2c;
+    position: absolute;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.profile-img img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Red Alert Bar */
+
+.scrolling-red-alert {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: red;
+}
+.scrolling-red-alert h2 {
+    text-transform: uppercase;
+    white-space: nowrap; /*Keeps text in straight line along red alert*/
+    position: absolute;
+    margin: 0;
+    margin-top: 1px;
+    padding: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
     color: white;
+    transform: translateX(100%);
+    animation: scrolling 25s linear infinite;
+}
+@keyframes scrolling {
+    0% {
+        transform: translateX(100%) ;
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
-}
-.login-register-container,
-.login,
-.signup {
-    padding: 9px 0px;  
-}
-.login-register-container .login {
-    background-color: #ff4c4c;
-    height: 30px;
-    width: 65px;
-    padding-top: 5px;
-    border-radius: 25px;
-    text-align: center;
-}
-.login-register-container .signup {
-    background-color: #ff4c4c;
-    height: 30px;
-    padding-top: 5px;
-    width: 85px;
-    border-radius: 25px;
-    text-align: center;
-}
-.login-register-container .login:hover {
-    background-color: red;
-    transform: scale(1.1);
-}
-.login-register-container .signup:hover {
-    background-color: red;
-    transform: scale(1.1);
-}
 
 
 /* Featured Tournament Section */ 
